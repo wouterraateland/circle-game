@@ -1,0 +1,25 @@
+{
+  "name": "circle-game",
+  "version": "0.0.1",
+  "description": "Flash your friends with fake links",
+  "scripts": {
+    "dev": "node server.js -p $PORT",
+    "build": "next build",
+    "heroku-postbuild": "next build",
+    "start": "node server.js -p $PORT"
+  },
+  "dependencies": {
+    "bitly": "^5.0.12",
+    "classnames": "^2.2.5",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "next": "^4.2.1",
+    "open-graph-scraper": "^3.1.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "engines": {
+    "node": "v8.4.0",
+    "npm": "5.6.0"
+  }
+}
