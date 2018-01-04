@@ -21,7 +21,7 @@ export default class MyDocument extends Document {
             *,
             *::before,
             *::after {
-              border-sizing: border-box;
+              box-sizing: border-box;
             }
 
             html, body {
@@ -70,10 +70,30 @@ export default class MyDocument extends Document {
               outline: none;
             }
 
+            button {
+              display: block;
+              width: 100%;
+              padding: .9em;
+              border: .1em solid;
+              border-radius: .5em;
+
+              text-align: center;
+              text-transform: uppercase;
+              font-family: Kanit, sans-serif;
+              font-weight: bold;
+              font-size: 1.2em;
+              letter-spacing: .1em;
+
+              color: #fe0;
+            }
+
             .body {
-              position: relative;
-              height: calc(100vh - 6em);
-              margin: 1em;
+              padding: 1em;
+            }
+
+            .wrapper {
+              max-width: 100vmin;
+              margin: auto;
             }
           `}</style>
         </Head>

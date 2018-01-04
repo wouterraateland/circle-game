@@ -3,43 +3,52 @@ import Link from 'next/link'
 export default () => (
   <div className="header">
     <Link href="/">
-      <div className="hamburger" />
+      <div className="circle" />
     </Link>
-    <h1>The Circle Game</h1>
+    <Link href="/">
+      <h1>The Circle Game</h1>
+    </Link>
     <style jsx>{`
       .header {
         padding: 1em;
         text-align: center;
       }
 
-      .hamburger {
+      .circle {
         position: relative;
         width: 1em;
         height: 1em;
 
         float: left;
+
+        border: .2em solid;
+        border-radius: 100%;
       }
 
-      .hamburger::before,
-      .hamburger::after {
+      .circle::before,
+      .circle::after {
         content: '';
 
         position: absolute;
-        left: 0;
+        left: .3em;
+        top: -.2em;
 
         height: .2em;
+        border-radius: .1em;
+
+        transform-origin: .1em .6em;
 
         background-color: currentColor;
       }
 
-      .hamburger::before {
-        bottom: .6em;
+      .circle::before {
         width: 1em;
+        transform: rotate(-45deg);
       }
 
-      .hamburger::after {
-        top: .6em;
-        width: .7em;
+      .circle::after {
+        width: 1em;
+        transform: rotate(-70deg);
       }
 
       h1 {

@@ -61,47 +61,46 @@ export default class CreationPage extends Component {
 
     return (
       <Page>
-        <form onSubmit={this.onSubmit}>
-          <label>
-            <input
-              className={classNames({empty: !link})}
-              name="uri"
-              value={link}
-              onChange={this.onChange}
-            />
-            <span>Paste a link</span>
-          </label>
-          <button type="submit">Transform</button>
-        </form>
-        {shortLink
-          ? <div>
+        <div className="wrapper">
+          <form onSubmit={this.onSubmit}>
+            <label>
+              <input
+                className={classNames({empty: !link})}
+                name="uri"
+                value={link}
+                onChange={this.onChange}
+              />
+              <span>Paste a link</span>
+            </label>
+            <button type="submit">Transform</button>
+          </form>
+          {shortLink
+            ? <div>
               <label>
                 <input value={shortLink} readOnly onClick={this.copy} />
                 <span>Your transformed link</span>
               </label>
               <p>Now share this link with your friends to flash them!</p>
             </div>
-          : null }
-        {error
-          ? <p>There was an error creating your link, try again.</p>
-          : null }
+            : null }
+            {error
+              ? <p>There was an error creating your link, try again.</p>
+              : null }
+        </div>
 
         <style jsx>{`
           p {
-            margin-top: 4em;
-
             font-size: 1.5em;
             text-align: center;
           }
 
           form {
-            margin-top: 10vmin;
           }
 
           label {
             display: block;
             padding: 1em 0;
-            margin: 2em 0;
+            margin: 1em 0;
 
             text-align: center;
           }
@@ -126,23 +125,6 @@ export default class CreationPage extends Component {
 
           input.empty:not(:focus) + span {
             margin: -1.6em 0 1.6em;
-          }
-
-          button {
-            display: block;
-            width: 100%;
-            padding: 1em;
-            border: .1em solid;
-            border-radius: .5em;
-
-            text-align: center;
-            text-transform: uppercase;
-            font-family: 'Kanit', sans-serif;
-            font-weight: bold;
-            font-size: 1.2em;
-            letter-spacing: .1em;
-
-            color: #fe0;
           }
         `}</style>
       </Page>

@@ -11,44 +11,42 @@ const LinkPage = ({url: {query: {og}}}) => (
       <meta name="twitter:site" content={og.twitterSite} />
       <meta name="twitter:title" content={og.twitterTitle} />
       <meta name="twitter:description" content={og.twitterDescription} />
-      { og.twitterImage
-        ? (
-          <meta name="twitter:image" content={og.twitterImage.url} />
-          <meta name="twitter:image:width" content={og.twitterImage.width} />
-          <meta name="twitter:image:height" content={og.twitterImage.height} />
-          <meta name="twitter:image:alt" content={og.twitterImage.alt} />
-        )
-        : null }
+      <meta name="twitter:image" content={og.twitterImage ? og.twitterImage.url : null} />
+      <meta name="twitter:image:width" content={og.twitterImage ? og.twitterImage.width : null} />
+      <meta name="twitter:image:height" content={og.twitterImage ? og.twitterImage.height : null} />
+      <meta name="twitter:image:alt" content={og.twitterImage ? og.twitterImage.alt : null} />
       <meta property="og:type" content={og.ogType} />
-      { og.ogImage
-        ? (
-          <meta property="og:image" content={og.ogImage.url} />
-          <meta property="og:image:height" content={og.ogImage.width} />
-          <meta property="og:image:width" content={og.ogImage.height} />
-          <meta property="og:image:alt" content={og.ogImage.alt} />
-        )
-        : null }
+      <meta property="og:image" content={og.ogImage ? og.ogImage.url : null} />
+      <meta property="og:image:height" content={og.ogImage ? og.ogImage.width : null} />
+      <meta property="og:image:width" content={og.ogImage ? og.ogImage.height : null} />
+      <meta property="og:image:alt" content={og.ogImage ? og.ogImage.alt : null} />
       <meta property="og:title" content={og.ogTitle} />
       <meta property="og:description" content={og.ogDescription} />
       <meta property="og:url" content={og.ogUrl} />
       <meta property="og:site_name" content={og.ogUrl} />
     </Head>
-    <p>You got flashed!</p>
     <Hand />
-    <Link href="/create">
-      <button>Flash your friends now</button>
-    </Link>
+    <div className="wrapper">
+      <p>You got flashed!</p>
+      <Link href="/create">
+        <button>Flash your friends now</button>
+      </Link>
+    </div>
     <style jsx>{`
+      div {
+        position: absolute;
+        left: 0;
+        right: 0; bottom: 0;
+
+        padding: 1em;
+      }
+
       p {
         font-size: 2em;
         text-align: center;
       }
 
       button {
-        position: absolute;
-        left: 0;
-        right: 0; bottom: 0;
-
         display: block;
         width: 100%;
         padding: 1em;
