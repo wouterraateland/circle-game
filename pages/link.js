@@ -11,16 +11,23 @@ const LinkPage = ({url: {query: {og}}}) => (
       <meta name="twitter:site" content={og.twitterSite} />
       <meta name="twitter:title" content={og.twitterTitle} />
       <meta name="twitter:description" content={og.twitterDescription} />
-      <meta name="twitter:image" content={og.twitterImage.url} />
-      <meta name="twitter:image:width" content={og.twitterImage.width} />
-      <meta name="twitter:image:height" content={og.twitterImage.height} />
-      <meta name="twitter:image:alt" content={og.twitterImage.alt} />
-
+      { og.twitterImage
+        ? (
+          <meta name="twitter:image" content={og.twitterImage.url} />
+          <meta name="twitter:image:width" content={og.twitterImage.width} />
+          <meta name="twitter:image:height" content={og.twitterImage.height} />
+          <meta name="twitter:image:alt" content={og.twitterImage.alt} />
+        )
+        : null }
       <meta property="og:type" content={og.ogType} />
-      <meta property="og:image" content={og.ogImage.url} />
-      <meta property="og:image:height" content={og.ogImage.width} />
-      <meta property="og:image:width" content={og.ogImage.height} />
-      <meta property="og:image:alt" content={og.ogImage.alt} />
+      { og.ogImage
+        ? (
+          <meta property="og:image" content={og.ogImage.url} />
+          <meta property="og:image:height" content={og.ogImage.width} />
+          <meta property="og:image:width" content={og.ogImage.height} />
+          <meta property="og:image:alt" content={og.ogImage.alt} />
+        )
+        : null }
       <meta property="og:title" content={og.ogTitle} />
       <meta property="og:description" content={og.ogDescription} />
       <meta property="og:url" content={og.ogUrl} />
