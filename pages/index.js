@@ -11,6 +11,7 @@ export default () => (
       <Link href="/create">
         <button>Start flashing now</button>
       </Link>
+      <p>Happy to hear any suggestions at <a href="mailto:wouterraateland@gmail.com" target="_blank">wouterraateland@gmail.com</a></p>
     </div>
     <style jsx>{`
       div {
@@ -21,6 +22,12 @@ export default () => (
       }
       h2 {
         margin-bottom: 2em;
+      }
+
+      p {
+        margin-top: 1em;
+        text-align: center;
+        font-size: .75em;
       }
     `}</style>
   </Page>

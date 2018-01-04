@@ -15,6 +15,8 @@ export default () => (
       }
 
       .circle {
+        cursor: pointer;
+        
         position: relative;
         width: 1em;
         height: 1em;
@@ -52,6 +54,8 @@ export default () => (
       }
 
       h1 {
+        cursor: pointer;
+
         margin: 0;
 
         font-size: 1em;

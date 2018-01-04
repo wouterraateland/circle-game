@@ -45,6 +45,16 @@ export default class MyDocument extends Document {
               letter-spacing: .1em;
             }
 
+            p {
+              margin: 0;
+              line-height: 1.5;
+            }
+
+            a {
+              cursor: pointer;
+              color: #fe0;
+            }
+
             img {
               max-width: 100%;
               max-height: 100%;
@@ -71,6 +81,8 @@ export default class MyDocument extends Document {
             }
 
             button {
+              cursor: pointer;
+              
               display: block;
               width: 100%;
               padding: .9em;
