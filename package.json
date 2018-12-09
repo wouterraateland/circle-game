@@ -9,17 +9,17 @@
     "start": "node server.js -p $PORT"
   },
   "dependencies": {
-    "bitly": "^5.0.12",
+    "bitly": "^5.1.7",
     "classnames": "^2.2.5",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
-    "next": "^4.2.1",
-    "open-graph-scraper": "^3.1.4",
+    "next": "^4.4.0-canary.3",
+    "open-graph-scraper": "^3.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
   "engines": {
-    "node": "v8.4.0",
+    "node": "v11.2.0",
     "npm": "5.6.0"
   }
 }
